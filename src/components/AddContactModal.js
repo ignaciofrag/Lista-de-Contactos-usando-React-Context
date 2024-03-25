@@ -45,11 +45,11 @@ function AddContactModal({ show, handleClose, contactToEdit = null }) {
         e.preventDefault();
         if (contact.id) {
           await actions.editContact(contact.id, {
-            full_name: contact.full_name, // Asegúrate de que coincida con la clave esperada por la API
+            full_name: contact.full_name, 
             email: contact.email,
             address: contact.address,
             phone: contact.phone,
-            agenda_slug: "downtown_xii", // Agrega esto si es necesario para tu API
+            agenda_slug: "downtown_xii", 
           });
         } else {
           await actions.addContact({
