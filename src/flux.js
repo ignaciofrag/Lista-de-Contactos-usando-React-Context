@@ -25,7 +25,6 @@ const getState = ({ getStore, setStore }) => {
             body: JSON.stringify({ ...newContact, agenda_slug: "downtown_xii" }),
           });
           if (!response.ok) throw new Error('Network response was not ok');
-          // Recarga los contactos después de la adición
           getStore().actions.loadContacts();
         } catch (error) {
           console.error("Error adding contact:", error);
